@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    font-family: 'Black Ops One';
+    font-size: 2rem;
+    height: 85px;
+    width: 85px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+    margin: 1px;
+}
+
+.btn--number{
+    background-image: linear-gradient(to bottom, #FF8B00, #FFC074);
+}
+
+#displayCalculator{
+    display: inline-block;
+    background-color: #538752;
+    width: 100%;
+    height: 80px;
+    text-align: end;
+    color: black;
+    border-radius: 20px;
+    font-size: 3rem;
+    text-align: bottom;
+    padding-top: 2px;
+
+    
+}
+
+main{
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    grid-template-rows: 1.5fr 6fr 1.5fr;
+    grid-template-areas: 
+    "lcd lcd"
+    "num ope"
+    "re re"
+    ;
+    row-gap: 0px;
+    align-items: ;
+}
+
+#div__display{
+    font-family: 'Press Start 2P';
+    overflow: hidden;
+    grid-area: lcd;
+    display: inline-block;
+}
+#div__numbers{
+    display: flex;
+    flex-flow: wrap-reverse;
+    grid-area: num;
+}
+#div__operation{
+    grid-area: ope;
+}
+#div__result{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    grid-area: re;
+    width: 100%;
+}
+.btn--result{
+    width: 72%;
+    background-image: linear-gradient(to bottom, #078900, #4C8949);
+}
+
+.btn--number:active{
+    background-image: linear-gradient(to bottom,#FFC074, #FF8B00);
+}
+.btn--result:active{
+      background-image: linear-gradient(to bottom, #4C8949, #078900);
+}  
+.btn--operation{
+      background-image: linear-gradient(to bottom, #303030, #929292);
+}
+.btn--operation:active{
+      background-image: linear-gradient(to bottom, #929292, #303030);    
+}
+
+#ce, #del{
+    background-image: linear-gradient(to bottom, #FF1e00, #FFB0A8);    
+}
+#ce:active, #del:active{
+    background-image: linear-gradient(to bottom, #FFB0A8, #FF1e00);    
+}
